@@ -1,0 +1,33 @@
+const navItems = [
+  { label: 'Overview', icon: 'dashboard', active: true },
+  { label: 'Logo Standards', icon: 'architecture' },
+  { label: 'Color Palette', icon: 'palette' },
+  { label: 'Typography', icon: 'format_size' },
+  { label: 'Grid System', icon: 'grid_on' },
+  { label: 'Imagery', icon: 'photo_library' },
+]
+
+export default function SideNav() {
+  return (
+    <aside className="hidden lg:flex flex-col fixed left-0 top-[72px] h-[calc(100vh-72px)] z-40 bg-surface-container-low w-72 border-r border-outline-variant py-6">
+      <div className="px-6 mb-8">
+        <h2 className="text-lg font-bold text-on-surface font-display">Identity Manual</h2>
+      </div>
+      <nav className="flex flex-col">
+        {navItems.map((item) => (
+          <div
+            key={item.label}
+            className={`px-6 py-3 flex items-center gap-3 text-sm font-semibold font-display cursor-pointer transition-all ${
+              item.active
+                ? 'bg-primary/10 text-primary border-r-4 border-primary'
+                : 'text-on-surface-variant hover:bg-surface-container'
+            }`}
+          >
+            <span className="material-symbols-outlined text-[20px]">{item.icon}</span>
+            {item.label}
+          </div>
+        ))}
+      </nav>
+    </aside>
+  )
+}
