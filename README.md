@@ -25,26 +25,29 @@ The design system reflects these core visual decisions extracted from the attach
 
 ```bash
 seedra-design-system/
+├── LICENSE
 ├── README.md
+├── .gitignore
 ├── package.json
 ├── tailwind.config.js
+├── postcss.config.js
+├── tsconfig.json
 ├── src/
 │   ├── tokens.css
 │   ├── app/
-│   │   └── brand-identity-page.tsx
+│   │   ├── globals.css
+│   │   ├── layout.tsx
+│   │   └── page.tsx
 │   ├── components/
-│   │   ├── button.tsx
-│   │   ├── card.tsx
 │   │   ├── top-app-bar.tsx
 │   │   ├── side-nav.tsx
-│   │   └── section-heading.tsx
+│   │   ├── section-heading.tsx
+│   │   └── card.tsx
 │   └── lib/
 │       └── cn.ts
-├── assets/
-│   ├── logos/
-│   ├── icons/
-│   └── imagery/
-└── figma/
+├── figma/
+│   └── README.md
+└── assets/
     └── README.md
 ```
 
