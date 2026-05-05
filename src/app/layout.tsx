@@ -17,3 +17,11 @@ export default function RootLayout({
     </html>
   )
 }
+
+export const metadata: Metadata = {
+  title: 'SEEDRA Design System',
+  description: 'Brand identity and component system for SEEDRA Ventures',
+  icons: {
+    icon: '/favicon.png',
+  },
+}
